@@ -1,2 +1,5 @@
 report/
 task/package
+build/
+compile_commands.json
+.cache
