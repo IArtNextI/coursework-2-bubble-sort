@@ -2,3 +2,6 @@ report/
 build/
 compile_commands.json
 .cache
+tests/
+solution/
+*.a
