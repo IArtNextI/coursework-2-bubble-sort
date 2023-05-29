@@ -6,3 +6,5 @@ target_link_libraries(gen PRIVATE
     testlib
     scoring
 )
+
+add_subdirectory(solutions)

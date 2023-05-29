@@ -245,31 +245,31 @@ void GoDeeper(ll n, ll m, ll empty, std::set<std::vector<std::vector<ll>>>& seen
     if (seen.find(cur) != seen.end()) {
         return;
     }
-//    std::cerr << "--------------------------" << std::endl;
-//    for (auto &x : cur) {
-//        for (auto &y : x) {
-//            std::cerr << y << ' ';
-//        }
-//        std::cerr << std::endl;
-//    }
-//    std::cerr << "--------------------------" << std::endl;
+    std::cerr << "--------------------------" << std::endl;
+    for (auto &x : cur) {
+        for (auto &y : x) {
+            std::cerr << y << ' ';
+        }
+        std::cerr << std::endl;
+    }
+    std::cerr << "--------------------------" << std::endl;
     seen.insert(cur);
     ld cur_score = (EmptyCount(cur) == empty ? pow(CalculateSquareScoreLd(n, m, empty, CalculateSquareScore(n, m, empty, cur), n - empty), 1.0l / 3) : 1);
     if (cur_score < maxe) {
-        // std::cerr << maxe << std::endl;
-        // for (auto &x : cur) {
-        //     std::cerr << x.size() << ' ';
-        //     for (auto &y : x) {
-        //         std::cerr << y << ' ';
-        //     }
-        //     std::cerr << std::endl;
-        // }
+        std::cerr << maxe << std::endl;
+        for (auto &x : cur) {
+            std::cerr << x.size() << ' ';
+            for (auto &y : x) {
+                std::cerr << y << ' ';
+            }
+            std::cerr << std::endl;
+        }
         maxe = cur_score;
         res = cur;
         moves = cmoves;
         ll resp = 0;
-//        std::cerr << "Ok?" << std::endl;
-//        std::cin >> resp;
+        std::cerr << "Ok?" << std::endl;
+        std::cin >> resp;
         if (resp == 1) {
             satisfied = true;
             return;
